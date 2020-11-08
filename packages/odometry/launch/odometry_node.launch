@@ -1,0 +1,13 @@
+<launch>
+
+    <group ns="$(arg veh)">
+        <remap from="~left_wheel_encoder_node/tick" to="/$(arg veh)/left_wheel_encoder_node/tick"/>
+        <remap from="~right_wheel_encoder_node/tick" to="/$(arg veh)/right_wheel_encoder_node/tick"/>
+        <remap from="~left_encoder_distance" to="/$(arg veh)/left_encoder_distance"/>
+        <remap from="~right_encoder_distance" to="/$(arg veh)/right_encoder_distance"/>
+        <remap from="~save_radius" to="/$(arg veh)/save_radius"/>
+        <node pkg="odometry" type="odometry_node.py" name="odometry_node" output="screen"/>
+
+    </group>
+
+</launch>

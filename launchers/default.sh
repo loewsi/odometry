@@ -13,7 +13,8 @@ dt-launchfile-init
 # NOTE: Use `dt-exec COMMAND` to run the main process (blocking process)
 
 # launching app
-dt-exec echo "This is an empty launch script. Update it to launch your application."
+dt-exec roslaunch odometry odometry_node.launch\
+  veh:="$VEHICLE_NAME" \
 
 
 # ----------------------------------------------------------------------------
